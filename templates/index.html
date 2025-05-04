@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Quote of the Day</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .quote-box {
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+        }
+        .refresh-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
     <div class="container text-center mt-5">
-      <h1 class="display-4">Quote of the Day</h1>
-      <div class="quote-box mt-4 p-4 shadow rounded">
-        <blockquote class="blockquote">
-          <p class="mb-0">"{{ quote }}"</p>
-        </blockquote>
-      </div>
+        <h1 class="display-4 text-primary fw-bold">Quote of the Day</h1>
+        <div class="quote-box mt-4 p-4 shadow rounded border border-3 border-primary">
+            <blockquote class="blockquote mb-0">
+                <p class="fs-4 fst-italic">“{{ quote }}”</p>
+            </blockquote>
+        </div>
+        <form method="get">
+            <button type="submit" class="btn btn-outline-primary btn-lg refresh-btn shadow-sm">🔄 Refresh Quote</button>
+        </form>
     </div>
-  </body>
+</body>
 </html>
