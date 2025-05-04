@@ -1,0 +1,9 @@
+body {
+    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quote-box {
+    background-color: #ffffff;
+    border-left: 8px solid #007bff;
+}
